@@ -71,7 +71,7 @@ function desencriptar(texto) {
 }
 
 function verificarTexto(texto) {
-  var regex = /^[A-ZáéíóúÁÉÍÓÚ\s]*$/;
+  var regex = /[A-ZáéíóúÁÉÍÓÚ\s]/;
   return !regex.test(texto);
 }
 
