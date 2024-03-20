@@ -1,0 +1,291 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F5FC;
+  font-display: Inter;
+
+}
+
+.principal {
+  display: flex;
+  padding: 20px;
+  height: 100%;
+}
+
+.izquierda {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2em;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 15%;
+}
+
+.encArea {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 3%;
+  padding-left: 10%;
+}
+
+.txtArea {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.txtArea>textarea {
+  font-size: 32px;
+  color: #0A3871;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 0px;
+  background-color: #F3F5FC;
+  resize: none;
+}
+
+.advArea {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btnArea {
+  width: auto;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnArea>button {
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 24px;
+  border-color: #0A3871;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.btnEncriptar {
+  background-color: #0A3871;
+  color: white;
+}
+
+.btnDesencriptar {
+  background-color: #D8DFE8;
+  color: #0A3871;
+}
+
+.derecha {
+  width: 24%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000004d;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.info {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info>img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: inherit;
+  }
+
+  50% {
+    transform: scale(1.4);
+    color: red;
+
+  }
+
+  100% {
+    transform: scale(1);
+    color: inherit;
+  }
+}
+
+.pulsar>p {
+  animation-name: pulse;
+  animation-duration: 0.8s;
+}
+
+.resultadoTexto {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.resultadoTexto>p {
+  font-size: 32px;
+  color: #0A3871;
+
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.texto>h1 {
+  font-size: 24px;
+}
+
+.texto>p {
+  font-size: 16px;
+}
+
+.btnCopiar {
+  display: none;
+  width: 90%;
+  height: 10%;
+  border-radius: 24px;
+  border-color: #0A3871;
+  background-color: #fff;
+  color: #0A3871;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.alerta {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 24px;
+  background-color: #0A3871;
+  color: white;
+  display: none;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+@media only screen and (max-width: 810px) {
+  .principal {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .izquierda {
+    width: 100%;
+    height: 80%;
+    padding-right: 0;
+  }
+
+  .logo {
+    height: 10%;
+  }
+
+  .encArea {
+    padding-right: 0%;
+    padding: 3%;
+  }
+
+  .txtArea>textarea {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .advArea {
+    padding-left: 0%;
+  }
+
+  .btnArea {
+    padding-left: 0%;
+    height: 10%;
+  }
+
+  .derecha {
+    width: 100%;
+    padding: 0;
+    overflow: auto;
+  }
+
+  .info {
+    padding-bottom: 2%;
+    height: max-content;
+  }
+
+  .info>img {
+    display: none;
+  }
+
+  .btnCopiar {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  html,
+  body {
+    height: 130%;
+  }
+
+  .principal {
+    height: 200%;
+  }
+
+  .izquierda {
+    max-height: 70%;
+  }
+
+  .derecha {
+    height: auto;
+  }
+
+  .resultadoTexto {
+    height: auto;
+  }
+
+  .btnArea {
+    height: 30%;
+    flex-direction: column;
+
+  }
+
+  .btnArea>button {
+    width: 100%;
+    margin-top: 3%;
+  }
+}
